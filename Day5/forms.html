@@ -8,34 +8,85 @@
 <body>
     <h2>We are learning forms today</h2>
     
-    <form>
+    <form action="/register" method="post">
         <label for="name">Write your name:</label>
         <input 
         type="text" 
         placeholder="Enter your name" 
         id="name" 
         name="name"
+        required
+        minlength="2"
+        maxlength="50"
         />
+        
         <br>
         <br>
+        
         <label for="email">Enter your email:</label>
         <input 
         type="email" 
         placeholder="Enter your email" 
         id="email" 
-        name="email"/>
+        name="email"
+        required
+        maxlength="100"
+        />
+        
         <br>
         <br>
+        
         <label for="age">Enter your age:</label>
         <input 
         type="number" 
         placeholder="Enter your age" 
         id="age" 
         name="age"
-        value="18"/>
+        value="18"
+        required
+        min="0"
+        max="100"
+        />
         <br>
         <br>
+
+        <label for="dob">DOB:</label>
+        <input
+        type="date"
+        placeholder="Enter your date of birth"
+        id="dob"
+        name="dob"
+        required
+        />  
+
+        <br>
+        <br>
+
+        <label for="color">Choose your favorite color:</label>
+        <input
+        type="color"
+        id="color"
+        name="color"
+        />
+
+        <br>
+        <br>
+
+        <button type="submit">Submit</button> 
+        <button type="reset">reset</button>
+
+        <br>
+        <br>
+
+        <span>Two different ways of putting submit button</span>
+        <br>
+        <span>one is button tag and other is input tag</span>
+        
+        <br>
+        <br>
+
         <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />    
     </form>
 </body>
 </html>
